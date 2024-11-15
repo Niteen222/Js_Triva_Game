@@ -1,0 +1,82 @@
+*{
+    font-family: Arial !important;
+}
+body{
+    background-color: black;
+}
+.welcome{
+    text-align: center;
+    color: #fff;
+    background-color: brown;
+    padding: 8px;
+}
+/* Input section  */
+.main{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding:20px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+.userinput{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.userinput1, .userinput2{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    border: 1px solid gray;
+    padding: 15px;
+    border-radius: 10px;
+    gap: 5px;
+}
+.userinput1 input, .userinput2 input{
+    outline: none;
+    padding: 5px 10px;
+    font-size: larger;
+}
+.star{
+    color: red;
+}
+.label{
+    font-size: x-large;
+    font-weight: 500;
+}
+.start-btn{
+    padding: 10px;
+    background-color:#fff;
+    border: 2px solid brown;
+    color: brown;
+    font-weight: 600;
+    border-radius: 7px;
+    padding:10px 15px;
+    cursor: pointer;
+    font-size: larger;
+}
+.start-btn:hover{
+    background-color: brown;
+    color: #fff;
+    transition: 0.2s ease-in-out;
+}
+@media (max-width:428px) {
+    .input-heading{
+        font-size: 1.4rem;
+    }
+    .userinput{
+        flex-direction: column;
+    }
+}
