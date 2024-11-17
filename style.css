@@ -5,10 +5,22 @@ body{
     background-color: black;
 }
 .welcome{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
     text-align: center;
     color: #fff;
     background-color: brown;
-    padding: 8px;
+    padding: 12px;
+}
+.gametitle{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 28px;
+    font-weight: 800;
+    text-align: center;
+    margin: auto;
 }
 /* Input section  */
 .main{
@@ -78,5 +90,10 @@ body{
     }
     .userinput{
         flex-direction: column;
+    }
+}
+@media (max-width:360px) {
+    .gametitle{
+        font-size:x-large;
     }
 }
