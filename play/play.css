@@ -27,7 +27,7 @@
 .playertwo {
     text-align: center;
     padding: 0 14px;
-    line-height: 0;
+    /* line-height: 0; */
     border-radius: 25px 0;
     color: #fff;
     background: rgb(53, 2, 57);
@@ -64,7 +64,7 @@ option {
     gap: 0;
     border: 1.5px solid #000;
     line-height: 0;
-    width: 180px;
+    /* width: 180px; */
 }
 
 .level {
@@ -99,12 +99,6 @@ option {
     width: 78%;
 }
 
-/* .onebt,
-.twobt {
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
-} */
 
 .answerbtns  button {
     background-color: transparent;
