@@ -47,7 +47,7 @@ const loadUserNameData= () => {
     if (questionData) {
       level.textContent=`Level :)  ${(questionData.difficulty).toUpperCase()}`
       trun.innerHTML=`Turn :)  ${(userTurn.player1).toUpperCase()}`
-      question.innerHTML=`<span class="qs">Question :) </span> ${questionData.question}`
+      question.innerHTML=`<span class="qs">Q. :) </span> ${questionData.question}`
       const allAnswers=[questionData.correctAnswer,...questionData.incorrectAnswers,].sort(() =>Math.random()-0.5)
       // console.log(allAnswers)
       answerbtns.innerHTML=""

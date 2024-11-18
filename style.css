@@ -1,5 +1,7 @@
 *{
     font-family: Arial !important;
+    margin: 0;
+    padding: 0;
 }
 body{
     background-color: black;
@@ -12,6 +14,10 @@ body{
     color: #fff;
     background-color: brown;
     padding: 12px;
+    position: sticky !important; 
+    top: 0;
+    z-index: 999;
+
 }
 .gametitle{
     display: flex;
@@ -38,6 +44,7 @@ body{
     padding: 10px;
     border-radius: 10px;
     background-color: #fff;
+    margin-top: 6%;
 }
 .userinput{
     display: flex;
