@@ -27,7 +27,6 @@ const loadUserNameData= () => {
   }
   
   const nextQuestion = () => {
-    // console.log("next");
     index=index+1
     // console.log(index)
     if (index==6){
@@ -106,13 +105,14 @@ const loadUserNameData= () => {
     activePlayer:player1Name
   }
   
+  
   function resetGameScore() {
     localStorage.setItem('gameData',JSON.stringify(playerScore))
     // console.log('Game has been reset.')
   }
   resetGameScore()
   
-  // Save the initial data to localStorage if not already present
+  // saving data if not in localstaorage 
   if (!localStorage.getItem('gameData')){
     localStorage.setItem('gameData',JSON.stringify(playerScore))
   }
@@ -122,26 +122,24 @@ const loadUserNameData= () => {
     return JSON.parse(localStorage.getItem('gameData'));
   }
   
+    // updating score 
   function updateScore(points) {
     const data = getGameData()
     const activePlayer = data.activePlayer
-  
-    // update the score 
     data[activePlayer].score+=points
   
     // Save the updated daata
     localStorage.setItem('gameData',JSON.stringify(data))
-  
     console.log(`${activePlayer} now has ${data[activePlayer].score} points.`)
   }
   
-  
+  // playes name swaping
   function swapPlayer() {
     const data=getGameData()
-    // togle active player
+    // player name changing
     data.activePlayer=data.activePlayer=== player1Name ? player2Name : player1Name
   
-    // Save the updated data back to localStorage
+    // saving here updated data
     localStorage.setItem('gameData', JSON.stringify(data))
     // console.log(`It's now ${data.activePlayer}'s turn.`)
     const playerdata = JSON.parse(localStorage.getItem("data"));
@@ -161,13 +159,14 @@ const loadUserNameData= () => {
   const restartgamebtn=document.querySelector('.restart')
   console.log(restartgamebtn);
   
+  // after game end
   const endGameMessage = () => {
     const data = getGameData()
     const player1Score = data[player1Name].score
     const player2Score = data[player2Name].score
     // console.log(player1Score)
     // console.log(player2Score)
-  
+
     if (player1Score < player2Score) {
       alert(`${player1Name} wins with a score of ${player1Score} points.`)
     } else if (player2Score < player1Score) {
