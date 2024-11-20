@@ -1,3 +1,4 @@
+// all twousername getting from input section
 const loadUserNameData= () => {
     const playerdata = JSON.parse(localStorage.getItem("data"))
     // console.log(playerdata)
@@ -37,6 +38,7 @@ const loadUserNameData= () => {
     renderQuestion(questionData[index])
   }
   
+  // question answer fetching here
   const question=document.querySelector(".question_heading")
   const renderQuestion=(questionData) =>{
     const trun=document.querySelector(".turn")
@@ -60,7 +62,11 @@ const loadUserNameData= () => {
   }
   
   
-  const questionScore={easy:10,medium:15,hard:20}
+  const questionScore={
+    easy:10,
+    medium:15,
+    hard:20
+  }
 //   console.log(questionScore)
   answerbtns.addEventListener("click",(e) =>{
     let targetButton=e.target
@@ -105,7 +111,7 @@ const loadUserNameData= () => {
     activePlayer:player1Name
   }
   
-  
+
   function resetGameScore() {
     localStorage.setItem('gameData',JSON.stringify(playerScore))
     // console.log('Game has been reset.')
